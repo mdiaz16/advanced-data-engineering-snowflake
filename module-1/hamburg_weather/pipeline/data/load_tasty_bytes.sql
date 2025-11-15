@@ -2,7 +2,7 @@ USE ROLE accountadmin;
 
 
 /*--
-database, schema and warehouse creation
+database, schema and warehouse creationC:\Projects\code\snowflake\course3\advanced-data-engineering-snowflake\module-1\hamburg_weather\pipeline\data\load_tasty_bytes.sql
 --*/
 
 
@@ -293,17 +293,17 @@ USE WAREHOUSE demo_build_wh;
 
 
 -- country table load
--- COPY INTO {{env}}_tasty_bytes.raw_pos.country
--- (
---    country_id,
---    country,
---    iso_currency,
---    iso_country,
---    city_id,
---    city,
---    city_population
--- )
--- FROM @{{env}}_tasty_bytes.public.s3load/raw_pos/country/;
+COPY INTO {{env}}_tasty_bytes.raw_pos.country
+(
+   country_id,
+   country,
+   iso_currency,
+   iso_country,
+   city_id,
+   city,
+   city_population
+)
+FROM @{{env}}_tasty_bytes.public.s3load/raw_pos/country/;
 
 
 -- franchise table load
